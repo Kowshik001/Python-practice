@@ -1,0 +1,24 @@
+l=input().split()
+l1=[]
+flag=0
+c=[]
+temp=0
+for i in l:
+    for j in range(int(len(i)/2)):
+        if i[j]==i[-j-1]:
+            if j+1==int(len(i)/2):
+                l1.append(i)
+                flag=1
+        else:
+            break
+print(l1)
+if flag!=0:
+    for i in l1:
+        if len(i)>temp:
+            temp=len(i)
+            ma=i
+    
+    print(ma)
+else:
+    print("No Strings Found")
+    
